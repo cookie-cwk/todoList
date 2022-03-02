@@ -1,0 +1,3 @@
+[INFO][pkg.go:api-gateway/weblib/handlers.PanicIfUserError:12]2022/03/01 15:55:14 userService--fallback failed with 'hystrix: timeout'. run error was 'hystrix: timeout'
+[INFO][pkg.go:api-gateway/weblib/handlers.PanicIfUserError:12]2022/03/01 15:56:03 userService--fallback failed with '用户名已存在'. run error was '用户名已存在'
+[INFO][pkg.go:api-gateway/weblib/handlers.PanicIfUserError:12]2022/03/01 15:57:03 userService--fallback failed with 'hystrix: timeout'. run error was 'hystrix: timeout'

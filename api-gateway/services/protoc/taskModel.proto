@@ -1,0 +1,23 @@
+syntax="proto3";
+package services;
+option go_package="./;protoc";
+
+message TaskModel {
+  uint64 Id = 1;
+
+  uint64 Uid = 2;
+
+  string Title = 3;
+
+  string  Content = 4;
+
+  int64 StartTime = 5;
+
+  int64 EndTime = 6;
+
+  int64 Status = 7;
+
+  int64 CreateTime = 8;
+
+  int64 UpdateTime = 9;
+}
