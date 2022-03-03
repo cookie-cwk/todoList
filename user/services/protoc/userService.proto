@@ -17,5 +17,5 @@ message UserDetailResponse{
 
 service UserService {
   rpc UserLogin(UserRequest) returns(UserDetailResponse);
-  rpc USerRegister(UserRequest) returns(UserDetailResponse);
+  rpc UserRegister(UserRequest) returns(UserDetailResponse);
 }

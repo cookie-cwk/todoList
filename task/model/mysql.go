@@ -18,4 +18,5 @@ func Database(connString string) {
 	sqlDB.SetMaxOpenConns(100)
 	sqlDB.SetConnMaxLifetime(time.Hour)
 	DB = db
+	DB.AutoMigrate(&Task{})
 }

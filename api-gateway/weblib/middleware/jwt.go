@@ -3,7 +3,6 @@ package middleware
 import (
 	"api-gateway/pkg/utils"
 	"github.com/gin-gonic/gin"
-	"strings"
 )
 
 func JWT() gin.HandlerFunc {
@@ -15,9 +14,6 @@ func JWT() gin.HandlerFunc {
 		if token == "" {
 			code = 401
 		} else {
-			if strings.HasPrefix(token, "Bearer ") {
-				 token = token[7:]
-			}
 			_, err := utils.ParseToken(token)
 			if  err != nil {
 				code = 401

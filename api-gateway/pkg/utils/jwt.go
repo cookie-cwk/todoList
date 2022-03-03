@@ -2,6 +2,7 @@ package utils
 
 import (
 	"github.com/dgrijalva/jwt-go"
+	"strings"
 	"time"
 )
 var jwtSecret = []byte("TodoList")
@@ -29,6 +30,9 @@ func GenerateToken(id uint) (string, error) {
 }
 
 func ParseToken(token string) (*Claims, error) {
+	if strings.HasPrefix(token, "Bearer ") {
+		token = token[7:]
+	}
 	tokenClaims, err := jwt.ParseWithClaims(token, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return jwtSecret, nil
 	})
